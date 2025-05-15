@@ -1,8 +1,17 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
-
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
 canvas {
   display: block;
+}
+
+.ui{
+  max-height: 30px;
 }

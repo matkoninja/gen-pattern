@@ -1,8 +1,8 @@
 resolution = {
-  x: 851,
-  y: 315,
+  x: 800,
+  y: 800,
 };
-number_of_points = 30;
+number_of_points = 140;
 distance = 80;
 splitMode = false;
 speed = 7;
@@ -48,6 +48,7 @@ function setup() {
   }
   // === UI PANEL ===
   let panel = createDiv()
+    .class("ui")
     .style("display", "flex")
     .style("flex-wrap", "wrap")
     .style("gap", "10px")
@@ -83,15 +84,16 @@ function setup() {
     resolution.x = int(resXInput.value());
     resolution.y = int(resYInput.value());
     resizeCanvas(resolution.x, resolution.y);
-  });
-
-  let restartBtn = createButton("Restart");
-  restartBtn.mousePressed(() => {
     number_of_points = pointSlider.value();
     distance = distanceSlider.value();
     speed = speedSlider.value();
     nodeWidth = nodeWidthSlider.value();
     strokeWidth = strokeSlider.value();
+    reinitializeNodes();
+  });
+
+  let restartBtn = createButton("Restart");
+  restartBtn.mousePressed(() => {
     reinitializeNodes();
   });
 
