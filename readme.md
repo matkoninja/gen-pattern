@@ -1,4 +1,4 @@
-**Controls:**
---**1-7** palette colors
---**M -** half and half mode
---**S -** save current image
+**Controls:**<br />
+**1-7** palette colors<br />
+**M -** half and half mode<br />
+**S -** save current image
